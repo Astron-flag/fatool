@@ -116,7 +116,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold purple][?] Пароль аккаунта[/bold purple]", "Пароль", password=False)
         acc_access_key = prompt_valid_value("[bold purple][?] Ключ доступа[/bold purple]", "Ключ доступа", password=False)
         console.print("[bold purple][%] Попытка входа[/bold purple]: ", end=None)
-        cpm = CarParkTool(acc_access_key)
+        cpm = termuxtoolfa(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
@@ -324,7 +324,7 @@ if __name__ == "__main__":
                 if status == 0:
                     console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
-                    console.print(f"[bold red]! ИНФОРМАЦИЯ[/bold red]: Чтобы использовать этот аккаунт с CarParkTool")
+                    console.print(f"[bold red]! ИНФОРМАЦИЯ[/bold red]: Чтобы использовать этот аккаунт")
                     console.print("вы должны войти в игру с этим аккаунтом.")
                     sleep(2)
                     continue
