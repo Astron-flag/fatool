@@ -9,7 +9,7 @@ from rich.text import Text
 from rich.style import Style
 from fatool import termuxtoolfa
 
-__CHANNEL_USERNAME__ = "FAtermux & astron_om"
+__CHANNEL_USERNAME__ = "FAtermux"
 __GROUP_USERNAME__   = ""
 
 def signal_handler(sig, frame):
@@ -106,6 +106,165 @@ def rainbow_gradient_string(customer_name):
         modified_string += f'[{interpolated_color}]{char}'
     return modified_string
 
+def black_gradient_string(customer_name):
+    modified_string = ""
+    black_color = "000000"  # Черный цвет
+    for char in customer_name:
+        modified_string += f"[{black_color}]{char}"
+    return modified_string
+
+def purple_gradient_string(customer_name):
+    modified_string = ""
+    purple_color = "800080"  # Фиолетовый цвет
+    for char in customer_name:
+        modified_string += f"[{purple_color}]{char}"
+    return modified_string
+
+def green_gradient_string(customer_name):
+    modified_string = ""
+    green_color = "008000"  # Зеленый цвет
+    for char in customer_name:
+        modified_string += f"[{green_color}]{char}"
+    return modified_string
+
+def red_gradient_string(customer_name):
+    modified_string = ""
+    red_color = "FF0000"  # Красный цвет
+    for char in customer_name:
+        modified_string += f"[{red_color}]{char}"
+    return modified_string
+
+def blue_gradient_string(customer_name):
+    modified_string = ""
+    blue_color = "0000FF"  # Синий цвет
+    for char in customer_name:
+        modified_string += f"[{blue_color}]{char}"
+    return modified_string
+
+def yellow_gradient_string(customer_name):
+    modified_string = ""
+    yellow_color = "FFFF00"  # Желтый цвет
+    for char in customer_name:
+        modified_string += f"[{yellow_color}]{char}"
+    return modified_string
+
+def orange_gradient_string(customer_name):
+    modified_string = ""
+    orange_color = "FFA500"  # Оранжевый цвет
+    for char in customer_name:
+        modified_string += f"[{orange_color}]{char}"
+    return modified_string
+
+def cyan_gradient_string(customer_name):
+    modified_string = ""
+    cyan_color = "00FFFF"  # Циан
+    for char in customer_name:
+        modified_string += f"[{cyan_color}]{char}"
+    return modified_string
+
+def magenta_gradient_string(customer_name):
+    modified_string = ""
+    magenta_color = "FF00FF"  # Магента
+    for char in customer_name:
+        modified_string += f"[{magenta_color}]{char}"
+    return modified_string
+
+def brown_gradient_string(customer_name):
+    modified_string = ""
+    brown_color = "A52A2A"  # Коричневый цвет
+    for char in customer_name:
+        modified_string += f"[{brown_color}]{char}"
+    return modified_string
+
+def pink_gradient_string(customer_name):
+    modified_string = ""
+    pink_color = "FFC0CB"  # Розовый цвет
+    for char in customer_name:
+        modified_string += f"[{pink_color}]{char}"
+    return modified_string
+
+def light_blue_gradient_string(customer_name):
+    modified_string = ""
+    light_blue_color = "ADD8E6"  # Светло-синий цвет
+    for char in customer_name:
+        modified_string += f"[{light_blue_color}]{char}"
+    return modified_string
+
+def dark_green_gradient_string(customer_name):
+    modified_string = ""
+    dark_green_color = "006400"  # Темно-зеленый цвет
+    for char in customer_name:
+        modified_string += f"[{dark_green_color}]{char}"
+    return modified_string
+
+def light_green_gradient_string(customer_name):
+    modified_string = ""
+    light_green_color = "90EE90"  # Светло-зеленый цвет
+    for char in customer_name:
+        modified_string += f"[{light_green_color}]{char}"
+    return modified_string
+
+def dark_blue_gradient_string(customer_name):
+    modified_string = ""
+    dark_blue_color = "00008B"  # Темно-синий цвет
+    for char in customer_name:
+        modified_string += f"[{dark_blue_color}]{char}"
+    return modified_string
+
+def dark_red_gradient_string(customer_name):
+    modified_string = ""
+    dark_red_color = "8B0000"  # Темно-красный цвет
+    for char in customer_name:
+        modified_string += f"[{dark_red_color}]{char}"
+    return modified_string
+
+def gold_gradient_string(customer_name):
+    modified_string = ""
+    gold_color = "FFD700"  # Золотой цвет
+    for char in customer_name:
+        modified_string += f"[{gold_color}]{char}"
+    return modified_string
+
+def silver_gradient_string(customer_name):
+    modified_string = ""
+    silver_color = "C0C0C0"  # Серебряный цвет
+    for char in customer_name:
+        modified_string += f"[{silver_color}]{char}"
+    return modified_string
+
+def gray_gradient_string(customer_name):
+    modified_string = ""
+    gray_color = "808080"  # Серый цвет
+    for char in customer_name:
+        modified_string += f"[{gray_color}]{char}"
+    return modified_string
+
+def violet_gradient_string(customer_name):
+    modified_string = ""
+    violet_color = "EE82EE"  # Фиолетовый цвет
+    for char in customer_name:
+        modified_string += f"[{violet_color}]{char}"
+    return modified_string
+
+def teal_gradient_string(customer_name):
+    modified_string = ""
+    teal_color = "008080"  # Бирюзовый цвет
+    for char in customer_name:
+        modified_string += f"[{teal_color}]{char}"
+    return modified_string
+
+def coral_gradient_string(customer_name):
+    modified_string = ""
+    coral_color = "FF7F50"  # Кораловый цвет
+    for char in customer_name:
+        modified_string += f"[{coral_color}]{char}"
+    return modified_string
+    
+    for char in customer_name:
+        modified_string += f'[{black_color}]{char}'
+    
+    return modified_string
+
 if __name__ == "__main__":
 
     console = Console()
@@ -153,6 +312,7 @@ if __name__ == "__main__":
                 "Увеличение монет ",
                 "Ранг King ",
                 "Смена ID ",
+                "Смена ID(разноцветный) ",
                 "Смена имени ",
                 "Смена имени (Радуга) ",
                 "Удаление аккаунта",
@@ -263,7 +423,66 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимый ID.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 5: # Смена имени
+
+            # Смена ID (выбор цвета)
+            elif service == 5:  
+                console.print("[bold purple][!] Выберите цвет для вашего нового ID.[/bold purple]")
+                color_choice = Prompt.ask("[bold][?] Выберите цвет", choices=[
+                    "черный", "фиолетовый", "зеленый", "красный", 
+                    "синий", "желтый", "оранжевый", "циан", 
+                    "магента", "коричневый", "розовый", 
+                    "светло-синий", "темно-зеленый", "светло-зеленый", 
+                    "темно-синий", "темно-красный", "золотой", 
+                    "серебряный", "серый", "бирюзовый", 
+                    "коралловый"], default="черный")
+                
+                console.print("[bold purple][!] Введите ваш новый ID.[/bold purple]")
+                new_id = Prompt.ask("[bold][?] ID[/bold]")
+                console.print("[bold purple][%] Сохранение ваших данных[/bold purple]: ", end=None)
+                
+                if len(new_id) >= 2 and len(new_id) <= 50 and (' ' not in new_id):
+                    color_functions = {
+                        "черный": black_gradient_string,
+                        "фиолетовый": purple_gradient_string,
+                        "зеленый": green_gradient_string,
+                        "красный": red_gradient_string,
+                        "синий": blue_gradient_string,
+                        "желтый": yellow_gradient_string,
+                        "оранжевый": orange_gradient_string,
+                        "циан": cyan_gradient_string,
+                        "магента": magenta_gradient_string,
+                        "коричневый": brown_gradient_string,
+                        "розовый": pink_gradient_string,
+                        "светло-синий": light_blue_gradient_string,
+                        "темно-зеленый": dark_green_gradient_string,
+                        "светло-зеленый": light_green_gradient_string,
+                        "темно-синий": dark_blue_gradient_string,
+                        "темно-красный": dark_red_gradient_string,
+                        "золотой": gold_gradient_string,
+                        "серебряный": silver_gradient_string,
+                        "серый": gray_gradient_string,
+                        "бирюзовый": teal_gradient_string,
+                        "коралловый": coral_gradient_string
+                    }
+
+                    # Установка ID в зависимости от выбранного цвета
+                    if color_choice in color_functions:
+                        if cpm.set_player_localid(color_functions[color_choice](new_id)):
+                            console.print("[bold green]УСПЕШНО.[/bold green]")
+                        else:
+                            console.print("[bold red]ОШИБКА.[/bold red]")
+                    else:
+                        console.print("[bold red]ОШИБКА.[/bold red]")
+                        console.print("[bold yellow][!] Выбранный цвет недоступен.[/bold yellow]")
+                        sleep(2)
+                        continue
+                else:
+                    console.print("[bold red]ОШИБКА.[/bold red]")
+                    console.print("[bold yellow][!] Пожалуйста, используйте допустимый ID.[/bold yellow]")
+                    sleep(2)
+                    continue
+
+            elif service == 6: # Смена имени
                 console.print("[bold purple][!] Введите ваше новое имя.[/bold purple]")
                 new_name = Prompt.ask("[bold][?] Имя[/bold]")
                 console.print("[bold purple][%] Сохранение ваших данных[/bold purple]: ", end=None)
@@ -284,7 +503,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 6: # Смена имени (Радуга)
+            elif service == 7: # Смена имени (Радуга)
                 console.print("[bold purple][!] Введите ваше новое радужное имя.[/bold purple]")
                 new_name = Prompt.ask("[bold][?] Имя[/bold]")
                 console.print("[bold purple][%] Сохранение ваших данных[/bold purple]: ", end=None)
@@ -306,7 +525,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
 
-            elif service == 7: # Удаление аккаунта
+            elif service == 8: # Удаление аккаунта
                 console.print("[bold purple][!] После удаления аккаунта восстановление невозможно !!.[/bold purple]")
                 answ = Prompt.ask("[bold purple][?] Вы хотите удалить этот аккаунт?[/bold purple]", choices=["y", "n"], default="n")
                 if answ == "y":
@@ -315,7 +534,7 @@ if __name__ == "__main__":
                     console.print("==================================")
                     console.print(f"")
                 else: continue
-            elif service == 8: # Регистрация аккаунта
+            elif service == 9: # Регистрация аккаунта
                 console.print("[bold purple][!] Регистрация нового аккаунта.[/bold purple]")
                 acc2_email = prompt_valid_value("[bold][?] Email аккаунта[/bold]", "Email", password=False)
                 acc2_password = prompt_valid_value("[bold][?] Пароль аккаунта[/bold]", "Пароль", password=False)
@@ -338,7 +557,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 9: # Удаление друзей
+            elif service == 10: # Удаление друзей
                 console.print("[bold purple][%] Удаление ваших друзей[/bold purple]: ", end=None)
                 if cpm.delete_player_friends():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -351,7 +570,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 10: # Разблокировка платных машин
+            elif service == 11: # Разблокировка платных машин
                 console.print("[bold yellow]! Примечание[/bold yellow]: эта функция занимает некоторое время, пожалуйста, не прерывайте процесс.", end=None)
                 console.print("[bold purple][%] Разблокировка всех платных машин[/bold purple]: ", end=None)
                 if cpm.unlock_paid_cars():
@@ -366,7 +585,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
 
-            elif service == 11: # Разблокировка двигателя w16
+            elif service == 12: # Разблокировка двигателя w16
                 console.print("[bold purple][%] Разблокировка двигателя w16[/bold purple]: ", end=None)
                 if cpm.unlock_w16():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -379,7 +598,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 12: # Разблокировка всех клаксонов
+            elif service == 13: # Разблокировка всех клаксонов
                 console.print("[bold purple][%] Разблокировка всех клаксонов[/bold purple]: ", end=None)
                 if cpm.unlock_horns():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -392,7 +611,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 13: # Отключение повреждений двигателя
+            elif service == 14: # Отключение повреждений двигателя
                 console.print("[bold purple][%] Отключение повреждений двигателя[/bold purple]: ", end=None)
                 if cpm.disable_engine_damage():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -405,7 +624,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 14: # Безлимитное топливо
+            elif service == 15: # Безлимитное топливо
                 console.print("[bold purple][%] Разблокировка безлимитного топлива[/bold purple]: ", end=None)
                 if cpm.unlimited_fuel():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -418,7 +637,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 15: # Разблокировка дома 3
+            elif service == 16: # Разблокировка дома 3
                 console.print("[bold purple][%] Разблокировка дома 3[/bold purple]: ", end=None)
                 if cpm.unlock_houses():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -431,7 +650,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 16: # Разблокировка дыма
+            elif service == 17: # Разблокировка дыма
                 console.print("[bold purple][%] Разблокировка дыма[/bold purple]: ", end=None)
                 if cpm.unlock_smoke():
                     console.print("[bold green]УСПЕШНО.[/bold green]")
@@ -444,7 +663,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, попробуйте снова.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 17: # Изменение побед в гонках
+            elif service == 18: # Изменение побед в гонках
                 console.print("[bold purple][!] Введите, сколько побед в гонках вы хотите.[/bold purple]")
                 amount = IntPrompt.ask("[bold][?] Сумма[/bold]")
                 console.print("[bold purple][%] Изменение ваших данных[/bold purple]: ", end=None)
@@ -465,7 +684,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 18: # Изменение поражений в гонках
+            elif service == 19: # Изменение поражений в гонках
                 console.print("[bold purple][!] Введите, сколько поражений в гонках вы хотите.[/bold purple]")
                 amount = IntPrompt.ask("[bold][?] Сумма[/bold]")
                 console.print("[bold purple][%] Изменение ваших данных[/bold purple]: ", end=None)
