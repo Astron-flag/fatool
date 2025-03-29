@@ -442,7 +442,7 @@ if __name__ == "__main__":
                 new_id = Prompt.ask("[bold][?] ID[/bold]")
                 console.print("[bold purple][%] Сохранение ваших данных[/bold purple]: ", end=None)
                 
-                if len(new_id) >= 2 and len(new_id) <= 50 and (' ' not in new_id):
+                if len(new_id) >= 2 and len(new_id) <= 200 and (' ' not in new_id):
                     color_functions = {
                         "черный": black_gradient_string,
                         "фиолетовый": purple_gradient_string,
