@@ -330,11 +330,13 @@ if __name__ == "__main__":
                 
             ]
 
-            # Вывод функций с градиентным цветом
+# Вывод функций с градиентным цветом
             for i, func in enumerate(functions):
                 # Уменьшаем значение красного и синего компонентов для затемнения
-                r = max(base_color[0] - i * 5, 0)  # Уменьшаем красный
-                b = max(base_color[2] - i * 5, 0)  # Уменьшаем синий
+                # Устанавливаем минимальные значения, чтобы не делать цвет слишком темным
+                min_color_value = 50  # Минимальное значение для светлоты 
+                r = max(base_color[0] - i * 5, min_color_value)  # Уменьшаем красный, но не опускаем ниже min_color_value
+                b = max(base_color[2] - i * 5, min_color_value)  # Уменьшаем синий, но не опускаем ниже min_color_value
                 color = f"rgb({r},0,{b})"  # Фиолетовый цвет с затемнением
                 console.print(f"[bold][purple]({i+1:02}):[/purple] [{color}]{func}[/{color}]")
 
