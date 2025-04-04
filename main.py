@@ -728,7 +728,7 @@ if __name__ == "__main__":
             elif service == 21: # Разблокировка всех мигалок на машины
                 console.print("[bold purple][%] Разблокировка мигалок на машины[/bold purple]: ", end=None)
                 if cpm.unlock_all_cars_siren():
-                    console.print("[bold green]SУСПЕШНО.[/bold green]")
+                    console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
                     answ = Prompt.ask("[bold purple][?] Вы хотите выйти?[/bold purple]", choices=["y", "n"], default="n")
                     if answ == "y": console.print(f"")
@@ -740,17 +740,21 @@ if __name__ == "__main__":
                     continue
 
             elif service == 22: # Клонирование аккаунта
-                console.print("[bold purple][%] Клонирование аккаунта[/bold purple]: ", end=None)
-                if  cpm.account_clone():
-                    console.print("[bold green]SУСПЕШНО.[/bold green]")
+                console.print("[bold purple]Введите данные для клонирования [/bold purple]:")
+                to_email = prompt_valid_value("[bold][?] Почта аккаунта[/bold]", "Почта", password=False)
+                to_password = prompt_valid_value("[bold][?] Пароль аккаунта [/bold]", "Пароль", password=False)
+                console.print("[bold cyan][%] Cloning your account[/bold cyan]: ", end=None)
+                if cpm.account_clone(to_email, to_password):
+                    console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
-                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти?[/bold purple]", choices=["y", "n"], default="n")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти? [/bold purple]", choices=["y", "n"], default="n")
                     if answ == "y": console.print(f"")
                     else: continue
                 else:
                     console.print("[bold red]ОШИБКА.[/bold red]")
-                    console.print("[bold yellow][!] Пожалуйста попробуйте заново[/bold yellow]")
+                    console.print("[bold yellow][!] Пожалуйста попробуйте заново [/bold yellow]")
                     sleep(2)
                     continue
+            else: continue
             break
         break
