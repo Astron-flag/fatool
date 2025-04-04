@@ -326,7 +326,10 @@ if __name__ == "__main__":
                 "Разблокировка дома 3",
                 "Разблокировка дыма",
                 "Изменение побед в гонках",
-                "Изменение поражений в гонках"
+                "Изменение поражений в гонках",
+                "Разблокировка всех машин",
+                "Разблокировка мигалок на все авто",
+                "клонирование аккаунта"
                 
             ]
 
@@ -342,7 +345,7 @@ if __name__ == "__main__":
 
             console.print("[bold][purple](0) :[/purple] [red]Выход[/red]", end="\n\n")
 
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19","20","21","22"]
             service = IntPrompt.ask(f"[bold][?] Выберите функцию [red][1-{choices[-1]} или 0][/red][/bold]", choices=choices, show_choices=False)
             if service == 0: # Выход
                 console.print(f"")
@@ -705,6 +708,48 @@ if __name__ == "__main__":
                 else:
                     console.print("[bold red]ОШИБКА.[/bold red]")
                     console.print("[bold yellow][!] Пожалуйста, используйте допустимые значения.[/bold yellow]")
+                    sleep(2)
+                    continue
+
+            elif service == 20: # Разблокировка всех машин
+                console.print("[bold purple][%] Разблокировка машин[/bold purple]: ", end=None)
+                if cpm.unlock_all_cars():
+                    console.print("[bold green]SУСПЕШНО.[/bold green]")
+                    console.print("==================================")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти?[/bold purple]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"")
+                    else: continue
+                else:
+                    console.print("[bold red]ОШИБКА.[/bold red]")
+                    console.print("[bold yellow][!] Пожалуйста попробуйте заново[/bold yellow]")
+                    sleep(2)
+                    continue
+
+            elif service == 21: # Разблокировка всех мигалок на машины
+                console.print("[bold purple][%] Разблокировка мигалок на машины[/bold purple]: ", end=None)
+                if cpm.unlock_all_cars_siren():
+                    console.print("[bold green]SУСПЕШНО.[/bold green]")
+                    console.print("==================================")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти?[/bold purple]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"")
+                    else: continue
+                else:
+                    console.print("[bold red]ОШИБКА.[/bold red]")
+                    console.print("[bold yellow][!] Пожалуйста попробуйте заново[/bold yellow]")
+                    sleep(2)
+                    continue
+
+            elif service == 22: # Клонирование аккаунта
+                console.print("[bold purple][%] Клонирование аккаунта[/bold purple]: ", end=None)
+                if  cpm.account_clone():
+                    console.print("[bold green]SУСПЕШНО.[/bold green]")
+                    console.print("==================================")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти?[/bold purple]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"")
+                    else: continue
+                else:
+                    console.print("[bold red]ОШИБКА.[/bold red]")
+                    console.print("[bold yellow][!] Пожалуйста попробуйте заново[/bold yellow]")
                     sleep(2)
                     continue
             break
