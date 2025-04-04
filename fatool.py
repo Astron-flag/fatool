@@ -4,7 +4,7 @@ from time import sleep
 
 
 
-BASE_URL: str = "http://a1107061.xsph.ru/api/"
+BASE_URL: str = "http://a1107061.xsph.ru/api"
 
 class termuxtoolfa:
 
