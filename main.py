@@ -743,7 +743,7 @@ if __name__ == "__main__":
                 console.print("[bold purple]Введите данные для клонирования [/bold purple]:")
                 to_email = prompt_valid_value("[bold][?] Почта аккаунта[/bold]", "Почта", password=False)
                 to_password = prompt_valid_value("[bold][?] Пароль аккаунта [/bold]", "Пароль", password=False)
-                console.print("[bold cyan][%] Cloning your account[/bold cyan]: ", end=None)
+                console.print("[bold purple][%] Клонируем ваш аккаунт [/bold purple]: ", end=None)
                 if cpm.account_clone(to_email, to_password):
                     console.print("[bold green]УСПЕШНО.[/bold green]")
                     console.print("==================================")
