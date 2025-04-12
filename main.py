@@ -4,7 +4,7 @@ from time import sleep
 import os, signal, sys
 from pyfiglet import figlet_format
 from rich.console import Console
-from rich.prompt import Prompt, IntPrompt
+from rich.prompt import Prompt, IntPrompt, FloatPrompt
 from rich.text import Text
 from rich.style import Style
 from fatool import termuxtoolfa
@@ -303,18 +303,15 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
 
-            # Начальный фиолетовый цвет (RGB: 128, 0, 128)
             base_color = (128, 0, 128)
-
-            # Список функций
             functions = [
-                "Увеличение денег ",
-                "Увеличение монет ",
-                "Ранг King ",
-                "Смена ID ",
-                "Смена ID(разноцветный) ",
-                "Смена имени ",
-                "Смена имени (Радуга) ",
+                "Увеличение денег",
+                "Увеличение монет",
+                "Ранг King",
+                "Смена ID",
+                "Смена ID(разноцветный)",
+                "Смена имени",
+                "Смена имени (Радуга)",
                 "Удаление аккаунта",
                 "Регистрация аккаунта",
                 "Удаление друзей",
@@ -329,24 +326,24 @@ if __name__ == "__main__":
                 "Изменение поражений в гонках",
                 "Разблокировка всех машин",
                 "Разблокировка мигалок на все авто",
-                "клонирование аккаунта"
-                
+                "Клонирование аккаунта",
+                "1695 хп на авто"
             ]
 
-# Вывод функций с градиентным цветом
             for i, func in enumerate(functions):
-                # Уменьшаем значение красного и синего компонентов для затемнения
-                # Устанавливаем минимальные значения, чтобы не делать цвет слишком темным
-                min_color_value = 50  # Минимальное значение для светлоты 
-                r = max(base_color[0] - i * 5, min_color_value)  # Уменьшаем красный, но не опускаем ниже min_color_value
-                b = max(base_color[2] - i * 5, min_color_value)  # Уменьшаем синий, но не опускаем ниже min_color_value
-                color = f"rgb({r},0,{b})"  # Фиолетовый цвет с затемнением
+                r = max(base_color[0] - i * 5, 50)
+                b = max(base_color[2] - i * 5, 50)
+                color = f"rgb({r},0,{b})"
                 console.print(f"[bold][purple]({i+1:02}):[/purple] [{color}]{func}[/{color}]")
 
             console.print("[bold][purple](0) :[/purple] [red]Выход[/red]", end="\n\n")
 
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19","20","21","22"]
-            service = IntPrompt.ask(f"[bold][?] Выберите функцию [red][1-{choices[-1]} или 0][/red][/bold]", choices=choices, show_choices=False)
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+                      "11", "12", "13", "14", "15", "16", "17", "18", "19", 
+                      "20", "21", "22", "23"]  # Добавлен "23"
+            
+            service = IntPrompt.ask(f"[bold][?] Выберите функцию [red][1-{choices[-1]} или 0][/red][/bold]", 
+                                  choices=choices, show_choices=False)
             if service == 0: # Выход
                 console.print(f"")
             elif service == 1: # Увеличение денег
@@ -755,6 +752,24 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Пожалуйста попробуйте заново [/bold yellow]")
                     sleep(2)
                     continue
+
+            elif service == 23: #1695hp на машину
+                console.print("[bold purple][!] Введите айди авто[/bold purple]")
+                car_id = IntPrompt.ask("[bold][?] Айди машины[/bold]")
+                console.print("[bold purple][%] Взламываем авто[/bold purple]:",end=None)
+                if cpm.hack_car_speed(car_id):
+                    console.print("[bold green]УСПЕШНО[/bold green]")
+                    console.print("================================")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти? [/bold purple]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"")
+                    else: continue
+                else:
+                    console.print("[bold green]УСПЕШНО[bold green]")
+                    
+                    sleep(2)
+                    continue
+                if answ == "n": 
+                    break
             else: continue
             break
         break
