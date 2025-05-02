@@ -207,29 +207,11 @@ class termuxtoolfa:
         response = requests.post(f"{BASE_URL}/hack_car_speed", params=params, data=payload)
         response_decoded = response.json()
 
-    def hack_car_speed800(self, car_id):
+    def hack_car_miliage(self, car_id):
         payload = {
             "account_auth": self.auth_token,
             "car_id": car_id
         }
         params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/hack_car_speed", params=params, data=payload)
-        response_decoded = response.json()
-
-    def hack_car_speed300(self, car_id):
-        payload = {
-            "account_auth": self.auth_token,
-            "car_id": car_id
-        }
-        params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/hack_car_speed", params=params, data=payload)
-        response_decoded = response.json()
-
-    def hack_car_speed414(self, car_id):
-        payload = {
-            "account_auth": self.auth_token,
-            "car_id": car_id
-        }
-        params = { "key": self.access_key }
-        response = requests.post(f"{BASE_URL}/hack_car_speed", params=params, data=payload)
+        response = requests.post(f"{BASE_URL}/hack_car_miliage", params=params, data=payload)
         response_decoded = response.json()
