@@ -59,18 +59,21 @@ def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
-        if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-            console.print("[bold][purple]================[/purple][[bold purple] ДАННЫЕ ИГРОКА [bold purple]][purple]================[/purple][/bold]")
-            console.print(f"[bold purple]Имя   [/bold purple]: { (data.get('Name') if 'Name' in data else 'НЕ ОПРЕДЕЛЕНО') }.")
-            console.print(f"[bold purple]Айди[/bold purple]: { (data.get('localID') if 'localID' in data else 'НЕ ОПРЕДЕЛЕНО') }.")
-            console.print(f"[bold purple]Деньги  [/bold purple]: { (data.get('money') if 'money' in data else 'НЕ ОПРЕДЕЛЕНО') }.")
-            console.print(f"[bold purple]Монеты  [/bold purple]: { (data.get('coin') if 'coin' in data else 'НЕ ОПРЕДЕЛЕНО') }.")
-        else:
-            console.print("[bold red]! ОШИБКА[/bold red]: новые аккаунты должны хотя бы один раз войти в игру !.")
-            exit(1)
+
+        console.print("[bold][purple]================[/purple][[bold purple] ДАННЫЕ ИГРОКА [bold purple]][purple]================[/purple][/bold]")
+
+        name = data.get('Name', 'НЕ ОПРЕДЕЛЕНО')
+        local_id = data.get('localID', 'НЕ ОПРЕДЕЛЕНО')
+        money = data.get('money', 'НЕ ОПРЕДЕЛЕНО')
+
+
+        console.print(f"[bold purple]Имя   [/bold purple]: {name}.")
+        console.print(f"[bold purple]Айди[/bold purple]: {local_id}.")
+        console.print(f"[bold purple]Деньги  [/bold purple]: {money}.")
+
     else:
         console.print("[bold red]! ОШИБКА[/bold red]: похоже, ваш вход не был выполнен правильно !.")
-        exit(1)
+        return
     
 def load_key_data(cpm):
     data = cpm.get_key_data()
