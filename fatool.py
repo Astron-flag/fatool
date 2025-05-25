@@ -241,3 +241,12 @@ class termuxtoolfa:
         params = { "key": self.access_key }
         response = requests.post(f"{BASE_URL}/hack_car_back", params=params, data=payload)
         response_decoded = response.json()
+
+    def hack_car_all(self, car_id):
+        payload = {
+            "account_auth": self.auth_token,
+            "car_id": car_id
+        }
+        params = { "key": self.access_key }
+        response = requests.post(f"{BASE_URL}/hack_car_all", params=params, data=payload)
+        response_decoded = response.json()

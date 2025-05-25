@@ -333,7 +333,8 @@ if __name__ == "__main__":
                 "1695 хп на авто",
                 "Сброс пробега на авто",
                 "Убрать передний бампер на авто",
-                "Убрать задний бампер на авто"
+                "Убрать задний бампер на авто",
+                "Убрать все бампера на авто"
             ]
 
             for i, func in enumerate(functions):
@@ -346,7 +347,7 @@ if __name__ == "__main__":
 
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
                       "11", "12", "13", "14", "15", "16", "17", "18", "19", 
-                      "20", "21", "22", "23", "24", "25","26"]  
+                      "20", "21", "22", "23", "24", "25","26","27"]  
             
             service = IntPrompt.ask(f"[bold][?] Выберите функцию [red][1-{choices[-1]} или 0][/red][/bold]", 
                                   choices=choices, show_choices=False)
@@ -809,6 +810,21 @@ if __name__ == "__main__":
                 car_id = IntPrompt.ask("[bold][?] Айди машины[/bold]")
                 console.print("[bold purple][%]ПРОГРЕСС[/bold purple]:",end=None)
                 if cpm.hack_car_back(car_id):
+                    console.print("[bold green]УСПЕШНО[/bold green]")
+                    console.print("================================")
+                    answ = Prompt.ask("[bold purple][?] Вы хотите выйти? [/bold purple]", choices=["y", "n"], default="n")
+                    if answ == "y": console.print(f"")
+                    else: continue
+                else:
+                    console.print("[bold green]УСПЕШНО[bold green]")
+                    
+                    sleep(2)
+                    continue
+            elif service == 27: #убрать все бампера
+                console.print("[bold purple][!] Введите айди авто[/bold purple]")
+                car_id = IntPrompt.ask("[bold][?] Айди машины[/bold]")
+                console.print("[bold purple][%]ПРОГРЕСС[/bold purple]:",end=None)
+                if cpm.hack_car_all(car_id):
                     console.print("[bold green]УСПЕШНО[/bold green]")
                     console.print("================================")
                     answ = Prompt.ask("[bold purple][?] Вы хотите выйти? [/bold purple]", choices=["y", "n"], default="n")
